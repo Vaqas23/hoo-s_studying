@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Django
+*.log
+db.sqlite3
+/media/
+/staticfiles/
+
+# Editor directories
+.vscode/
+.idea/
+
+# Environment / secrets
+.env
+.env.*
+
+# Byte-compiled / cache
+*.pyc
