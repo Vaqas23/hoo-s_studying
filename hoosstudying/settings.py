@@ -31,6 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    # My apps
+    'accounts.apps.AccountsConfig',
+    'groups',
+    'board',
+    # Auto generated
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
