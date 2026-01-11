@@ -1,0 +1,9 @@
+<h1>{{ profile.user.username }}'s Profile</h1>
+
+<p><strong>Year:</strong> {{ profile.get_year_display }}</p>
+<p><strong>Major(s)/Minor(s):</strong> {{ profile.majors_minors }}</p>
+<p><strong>Gender:</strong> {{ profile.get_gender_display }}</p>
+<p><strong>Meeting Times:</strong> {{ profile.preferred_meeting_times }}</p>
+<p><strong>Meeting Location:</strong> {{ profile.preferred_meeting_location }}</p>
+
+<a href="{% url 'edit_profile' %}">Edit Profile</a>
