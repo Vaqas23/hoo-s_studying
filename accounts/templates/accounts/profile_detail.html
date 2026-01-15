@@ -6,4 +6,6 @@
 <p><strong>Meeting Times:</strong> {{ profile.preferred_meeting_times }}</p>
 <p><strong>Meeting Location:</strong> {{ profile.preferred_meeting_location }}</p>
 
-<a href="{% url 'edit_profile' %}">Edit Profile</a>
+{% if profile.user == request.user %}
+<a href="{% url 'accounts:edit_profile' %}">Edit Profile</a>
+{% endif %}
