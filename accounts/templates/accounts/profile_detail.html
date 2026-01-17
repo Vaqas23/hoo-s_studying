@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 <h1>{{ profile.user.username }}'s Profile</h1>
 
 <p><strong>Year:</strong> {{ profile.get_year_display }}</p>
@@ -9,3 +12,4 @@
 {% if profile.user == request.user %}
 <a href="{% url 'accounts:edit_profile' %}">Edit Profile</a>
 {% endif %}
+{% endblock %}
