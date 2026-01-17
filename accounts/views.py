@@ -12,7 +12,7 @@ def edit_profile(request):
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect('my_profile_view')
+            return redirect("accounts:my_profile_view")
     else:
         form = ProfileForm(instance=profile)
 
