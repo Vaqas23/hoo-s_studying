@@ -34,8 +34,7 @@ INSTALLED_APPS = [
 
     # My apps
     'accounts.apps.AccountsConfig',
-    'groups',
-    'board',
+    'courses',
     # Auto generated
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "home"     # or whatever you call it
+LOGOUT_REDIRECT_URL = "login"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,6 +127,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
-LOGIN_REDIRECT_URL = "/accounts/profile/me/"
-LOGOUT_REDIRECT_URL = "/accounts/login/"
