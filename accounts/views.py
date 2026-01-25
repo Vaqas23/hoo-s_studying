@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import SignUpForm
-from verify_email.email_handler import EmailHandler
 
 
 def signup(request):
@@ -16,4 +15,5 @@ def signup(request):
     return render(request, "accounts/signup.html", {"form": form})
 
 
-def verify_email(token):
+def homeview(request):
+    return render(request, "accounts/home.html")

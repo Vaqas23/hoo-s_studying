@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'noreply<hoosstudying@local>'
 
 # Application definition
 
@@ -39,7 +38,6 @@ INSTALLED_APPS = [
     # My apps
     'accounts.apps.AccountsConfig',
     'courses',
-    "verify_email.apps.VerifyEmailConfig",
 
     # Auto generated
     'django.contrib.admin',
@@ -122,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
