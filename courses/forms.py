@@ -7,7 +7,7 @@ class EnrollCourseForm(forms.Form):
 
     def clean_course_code(self):
         code = self.cleaned_data['course_code'].strip().upper()
-        if Course.objects.filter(field_name=code).exists():
+        if Course.objects.filter(code=code).exists():
             return code
         else:
             raise forms.ValidationError(

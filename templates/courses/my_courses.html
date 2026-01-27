@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Signup{% endblock %}
+{% block context %}
+<h1>My Courses</h1>
+{% if student.courses.all %}
+
+{% else %}
+<p> No courses to display. Your manually assigned courses will appear here </p>
+{% endif %}
+
+{% endblock %}
