@@ -18,7 +18,3 @@ def my_courses(request):
         form = EnrollCourseForm()
 
     return render(request, "accounts/signup.html", {"form": form})
-
-
-def courseview(request):
-    return render(request, "courses/my_course.html")
