@@ -11,4 +11,4 @@ class EnrollCourseForm(forms.Form):
             return code
         else:
             raise forms.ValidationError(
-                "That is not a valid course. Ex: Econ 2010")
+                "That is not a valid course (or we just don't have it in our database). Please also ensure your format is correct, Ex: Econ 2010")
