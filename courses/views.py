@@ -8,13 +8,16 @@ from .forms import EnrollCourseForm
 
 @login_required
 def my_courses(request):
-    request = request.user.student
+    student = request.user.student
     if request.method == "POST":
         form = EnrollCourseForm(request.POST)
         if form.is_valid():
-            # form.course_code
+            code = form.cleaned_data['course_code']
+            student1 = student.object.get(name=student.name)
+            course1 = Course.objects.get(code=code)
+            student.courses.add(course1)
             return redirect('my_courses')
     else:
         form = EnrollCourseForm()
 
-    return render(request, "accounts/signup.html", {"form": form})
+    return render(request, "courses/my_courses.html", {"form": form, "student": student})
