@@ -13,8 +13,7 @@
     <a href="{% url 'my_courses' %}">My Courses</a>
     {% else %}
     <a href="{% url 'accounts:login' %}">Login</a> |
-    <a href="{% url 'accounts:signup' %}">Signup</a> |
-    <a href="{% url 'my_courses' %}">My Courses</a>
+    <a href="{% url 'accounts:signup' %}">Signup</a>
     {% endif %}
     <hr>
     {% block content %}{% endblock %}
