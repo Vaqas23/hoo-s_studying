@@ -13,8 +13,8 @@ def my_courses(request):
         form = EnrollCourseForm(request.POST)
         if form.is_valid():
             code = form.cleaned_data['course_code']
-            course1 = Course.objects.get(code=code)
-            student.courses.add(course1)
+            course = Course.objects.get(code=code)
+            student.courses.add(course)
             return redirect('my_courses')
     else:
         form = EnrollCourseForm()
