@@ -3,6 +3,7 @@
 {% block content %}
 <h1>My Courses</h1>
 <h2>Add a Course</h2>
+<p>Format: Ex. Math 1310</p>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
