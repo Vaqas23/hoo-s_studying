@@ -2,17 +2,18 @@
 <html>
 
 <head>
-    <title>{% block title %}HooStudying{% endblock %}</title>
+    <title>{% block title %}HoosStudying{% endblock %}</title>
 </head>
 
 <body>
     {% if user.is_authenticated %}
     Logged in as {{ user.username }} |
-    <form method="post" action="{% url 'logout' %}" style="display:inline"> {% csrf_token %} <button
-            type="submit">Logout</button> </form>
+    <form method="post" action="{% url 'accounts:logout' %}" style="display:inline"> {% csrf_token %} <button
+            type="submit">Logout</button> </form> |
+    <a href="{% url 'my_courses' %}">My Courses</a>
     {% else %}
-    <a href="{% url 'login' %}">Login</a> |
-    <a href="{% url 'signup' %}">Signup</a>
+    <a href="{% url 'accounts:login' %}">Login</a> |
+    <a href="{% url 'accounts:signup' %}">Signup</a> |
     <a href="{% url 'my_courses' %}">My Courses</a>
     {% endif %}
     <hr>

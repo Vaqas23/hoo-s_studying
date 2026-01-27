@@ -48,9 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-LOGIN_URL = "login"
-LOGIN_REDIRECT_URL = "home"     # or whatever you call it
-LOGOUT_REDIRECT_URL = "login"
+LOGIN_URL = "accounts:login"
+LOGIN_REDIRECT_URL = "accounts:home"     # or whatever you call it
+LOGOUT_REDIRECT_URL = "accounts:login"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
