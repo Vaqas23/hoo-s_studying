@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     # My apps
     'accounts.apps.AccountsConfig',
-    'courses',
+    'courses.apps.CoursesConfig',
 
     # Auto generated
     'django.contrib.admin',
