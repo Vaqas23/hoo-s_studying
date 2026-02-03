@@ -10,7 +10,7 @@
     Logged in as {{ user.username }} |
     <form method="post" action="{% url 'accounts:logout' %}" style="display:inline"> {% csrf_token %} <button
             type="submit">Logout</button> </form> |
-    <a href="{% url 'my_courses' %}">My Courses</a>
+    <a href="{% url 'courses:my_courses' %}">My Courses</a>
     {% else %}
     <a href="{% url 'accounts:login' %}">Login</a> |
     <a href="{% url 'accounts:signup' %}">Signup</a>
