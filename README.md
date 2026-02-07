@@ -1,5 +1,5 @@
 
-- Basic Django Backend
+- Rudimentary Django Backend
 - Just learning the basics
 
 Tech Stack
